@@ -1,0 +1,35 @@
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+body {
+		background-color:  #fff;
+}
+
+
+<h2>Size</h2>
+<h2>Add a border to a table:</h2>
+
+<table>
+  <tr>
+    <th>Size</th>
+  </tr>
+  <tr>
+    <td>Personal Pizza</td>
+  </tr>
+  <tr>
+    <td>Medium Pizza</td>
+  </tr>
+  <tr>
+	<td>Large Pizza</td>
+  </tr>
+  <tr>
+	<td> Extra Large Pizza</td>
+  </tr>
+  
+</table>
+
