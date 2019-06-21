@@ -4,7 +4,7 @@
 <head>
 	<meta charest = "utf-8">
 	<title>Anne's Pizza Project</title>
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 
 
 </head>
@@ -13,40 +13,40 @@
 	<div id="menuBG">
 		<h1> Pizza Hub </h1>
 		<h2> Menu </h2>
-		<h3 style="color:rgb(32, 82, 218); text-align: center";>Create Your Own Pizza!</h3>
+		<h3>Create Your Own Pizza!</h3>
+		<img src="images/yummy.jpg" alt="Pizza" class="medium"/>
 	</div>
+	
 
-	<div class="menu left"></div>
 
+	<div class="menu-left">
 
-		<h2 style="color:rgb(32, 82, 218)">Size</h2>
+		<h2>Size</h2>
 		<input class="size" type="radio" name="Size" value="Personal Pizza"> Personal Pizza<br>
 		<input class="size" type="radio" name="Size" value="Medium Pizza"> Medium Pizza<br>
 		<input class="size" type="radio" name="Size" value="Large Pizza" checked> Large Pizza<br>
 		<input class="size" type="radio" name="Size" value="Extra Large Pizza"> Extra Large Pizza<br>
 
-		<h2 style="color:rgb(32, 82, 218)">Cheese</h2>
+		<h2>Cheese</h2>
 		<input class="cheese" type="radio" name="Cheese" value="Regular Cheese"> Regular Cheese<br>
 		<input class="cheese" type="radio" name="Cheese" value="No Cheese"> No Cheese <br>
 		<input class="cheese" type="radio" name="Cheese" value="Extra Cheese"> Extra Cheese<br>
 
-		<h2 style="color:rgb(32, 82, 218)">Sauce</h2>
+		<h2>Sauce</h2>
 		<input class="sauce" type="radio" name="Sauce" value="Marinara Sauce"> Marinara Sauce<br>
 		<input class="sauce" type="radio" name="Sauce" value="White Sauce"> White Sauce<br>
 		<input class="sauce" type="radio" name="Sauce" value="Barbeque Sauce"> Barbeque Sauce<br>
 		<input class="sauce" type="radio" name="Sauce" value="No Sauce"> No Sauce<br>
-	
 
-	<div class="menu right"></div>
 
-		<h2 style="color:rgb(32, 82, 218)">Crust</h2>
+		<h2>Crust</h2>
 		<input class="crust" type="radio" name="Crust" value="Plain Crust"> Plain Crust<br>
 		<input class="crust" type="radio" name="Crust" value="Garlic Butter Crust"> Garlic Butter Crust<br>
 		<input class="crust" type="radio" name="Crust" value="Cheese Stuffed Crust"> Cheese Stuffed Crust<br>
 		<input class="crust" type="radio" name="Crust" value="Spicy Crust"> Spicy Crust<br>
 		<input class="crust" type="radio" name="Crust" value="House Special Crust"> House Special Crust<br>
 
-		<h2 style="color:rgb(32, 82, 218)">Meats</h2>
+		<h2>Meats</h2>
 		<input class="meats" type="checkbox" name="Meat" value="Pepperoni"> Pepperoni<br>
 		<input class="meats" type="checkbox" name="Meat" value="Sausage"> Sausage<br>
 		<input class="meats" type="checkbox" name="Meat" value="Canadian Bacon"> Canadian Bacon<br>
@@ -54,7 +54,7 @@
 		<input class="meats" type="checkbox" name="Meat" value="Anchovy"> Anchovy<br>
 		<input class="meats" type="checkbox" name="Meat" value="Chicken"> Chicken<br>
 
-		<h2 style="color:rgb(32, 82, 218)">Veggies</h2>
+		<h2>Veggies</h2>
 		<input class="veggies" type="checkbox" name="Veggies" value="Tomatoes"> Tomatoes<br>
 		<input class="veggies" type="checkbox" name="Veggies" value="Onions"> Onions<br>
 		<input class="veggies" type="checkbox" name="Veggies" value="Olives"> Olives<br>
@@ -65,26 +65,28 @@
 		<input class="veggies" type="checkbox" name="Veggies" value="Jalepeno"> Jalepeno<br>
 		<br>
 		<br>
-		</div>
-
-	<input style="color:White; background-color: rgb(255,0,0); font-size: 125%; height:100%; width:40%"; 
-	id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+		
+	<input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
 	
-
-
-
 	<div id="cart">
 		<div id="showText"></div>
 		<div id="subTotal"></div>
 		<div id="tax"></div>
-		<div style="border-style: solid; width:10%; height:5%; font:50%; background-color:rgb(252, 247, 0)"; 
-		id="totalPrice"></div>
+		<div id="totalPrice"></div>
 	</div>
 	
 
-	<input style =  "color:White; background-color: rgb(255,0,0); font-size: 125%; height:100%; width:40%;
-	display:none"; id="cancel-button" type="button" onclick="erased()" value="Cancel">
+	<input display:none; id="cancel-button" type="button" onclick="erased()" value="Cancel">
 	
+		
+
+
+
+	
+
+	<div class="menu right"></div>
+
+
 
 	<script>
 		
@@ -100,7 +102,7 @@
 		function getReceipt() {
 			// This initializes our string so it can get passed from  
 			// function to function, growing line by line into a full receipt
-			var text1 = "<h3 style='border-bottom-style: solid; width: 10%'>You Ordered:</h3>";
+			var text1 = "<h4>You Ordered:</h4>";
 			var runningTotal = 0;
 			var sizeTotal = 0;
 			var sizeArray = document.getElementsByClassName("size");
